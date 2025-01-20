@@ -1,0 +1,40 @@
+.background {
+  
+    &__content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      position: relative;
+      margin: 1.5rem 0;
+    }
+  }
+  
+  /* Content */
+  
+  
+  .main__image img {
+    width: 50%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.9);
+    z-index: 2;
+    position: relative;
+    margin-left: 350px;
+    background-color: black;
+  }
+  
+  .side__images img {
+    width: 40%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: black;
+  }
+  
+  .side__images img:first-child {
+    left: 10%;
+  }
+  
+  .side__images img:last-child {
+    right: 10%;
+  }
+  

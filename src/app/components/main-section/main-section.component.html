@@ -1,0 +1,25 @@
+
+<main role="main">
+    <section class="hero">
+        <div class="hero__data">
+          <h1>
+            Your cloud. In your <span class="hero__span">home.</span>
+          </h1>
+          <h4>Store your files, download and stream media, run a Bitcoin node, and more — all in yourhome.</h4>
+        </div>
+        <section class="hero__content">
+              <app-main-image [lista]="sectionImage1"></app-main-image>
+              <app-main-image [lista]="sectionImage2"></app-main-image>
+        </section>
+        <div class="container">
+            <app-container-images [opciones]="sectionImage1"></app-container-images>
+            <app-container-images [opciones]="sectionImage2"></app-container-images>
+        </div>
+        <app-slider></app-slider>
+    </section>
+    <section class="background">
+        <app-background-header></app-background-header>
+        <app-background-content></app-background-content>
+        <app-background-footer></app-background-footer>
+      </section>
+</main>

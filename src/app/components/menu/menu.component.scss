@@ -1,24 +1,21 @@
-@use '../../ui/styles/variables.scss' as variables;
 @use '../../ui/styles/mixins.scss' as mixins;
 
 .menu {
-  @include mixins.container-gap(40px);
-  list-style: none;
-
-  &__item {
-    font-weight: 600;
-  }
+    display: flex;
+    @include mixins.container(center);
+    list-style: none;
+    gap: 22px;
   
-  &__item, &__icon {
-    @include mixins.container-gap(3px);
-  }
+    &__item a {
+      text-decoration: none;
+      @include mixins.container(center);
+      color: #ffff;
+      font-size: 14px;
+      font-weight: 400;
+    }
   
-  &__icon {
-    color: variables.$gray;
-  }
+    &__item a:hover {
+      color: #5351ea;
   
-  &__link {
-    color: #000;
-    text-decoration: none;
+    }
   }
-}
