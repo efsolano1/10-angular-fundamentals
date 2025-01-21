@@ -1,124 +1,127 @@
-@use '../../ui/styles/mixins.scss' as mixins;
+@use "../../ui/styles/mixins.scss" as mixins;
+@use "../../ui/styles/variables.scss" as variables;
 .hero {
+  &__container {
+    @include mixins.container-display;
+    align-items: center;
+    flex-direction: column;
+    margin: 25px auto;
+    width: 600px;
+    gap: -40px;
+  }
 
-    &_container {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      margin: 25px auto;
-      width: 600px;
-      gap: -40px;
-    }
-  
-    &__image {
-      display: flex;
-      flex-direction: row;
-      @include mixins.container(center);
-      margin-bottom: 20px;
-      position: relative;
-    }
-  
-    &__description {
-      display: flex;
-      flex-direction: column;
-      @include mixins.container(center);
-      text-align: center;
-      color: white;
-    }
-  
-    &__image__tablet {
-      width: 450px;
-      will-change: transform, opacity;
-      opacity: 1;
-      transform: translateX(-5%) perspective(1000px) rotateX(-10.8935deg) rotateY(22.2296deg);
-      transition: transform 0.5s ease, opacity 0.5s ease;
-    }
-  
-    &__image__phone {
-      width: 300px;
-      position: absolute;
-      left: 65%;
-      transform: translateX(-20%) translateY(-2px) perspective(1200px) rotateX(-9.44675deg) rotateY(-15.1148deg);
-      z-index: 1;
-      margin-top: 120px;
-      will-change: transform, opacity;
-      opacity: 1;
-      transition: transform 0.5s ease, opacity 0.5s ease;
-    }
-  
-    &__image__server1 {
-      z-index: 1;
-      width: 500px;
-      will-change: transform, opacity;
-      opacity: 1;
-      transform: translateX(-5%) perspective(1000px) rotateX(-10.8935deg) rotateY(22.2296deg);
-      transition: transform 0.5s ease, opacity 0.5s ease;
-    }
-  
-    &__image__server2 {
-      width: 520px;
-      position: absolute;
-      left: 65%;
-      transform: translateX(-40%) translateY(-80px) perspective(1200px) rotateX(-9.44675deg) rotateY(180deg) scaleX(-1);
-      will-change: transform, opacity;
-      margin-top: 100px;
-      opacity: 1;
-      transition: transform 0.5s ease, opacity 0.5s ease;
-    }
-  
-    &__description h2 {
-      margin-bottom: 10px;
-    }
-  
-    &__description &__description__p {
-      color: #4b4aac;
-    }
-  
-    &__description p {
-      margin-bottom: 25px;
-      color: #aaa7aa;
-    }
-  
-    &__description__button {
-      width: 100%;
-      margin-top: 15px;
-    }
-  
+  &__image {
+    @include mixins.container-display;
+    flex-direction: row;
+    @include mixins.container(center);
+    margin-bottom: 20px;
+    position: relative;
   }
-  
-  .hero__description__button .hero__description__button--modifier {
-    background-color: #3431ea;
-    color: white
+
+  &__description {
+    @include mixins.container-display;
+    flex-direction: column;
+    @include mixins.container(center);
+    text-align: center;
+    color: white;
   }
-  
-  .hero__description__button .hero__description__button--modifier:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+  &__image__tablet {
+    width: 450px;
+    will-change: transform, opacity;
+    opacity: 1;
+    transform: translateX(-5%) perspective(1000px) rotateX(-10.8935deg)
+      rotateY(22.2296deg);
+    transition: transform 0.5s ease, opacity 0.5s ease;
   }
-  
-  .hero__description__button a,
-  .hero__description a {
+
+  &__image__phone {
+    width: 300px;
+    position: absolute;
+    left: 65%;
+    transform: translateX(-20%) translateY(-2px) perspective(1200px)
+      rotateX(-9.44675deg) rotateY(-15.1148deg);
+    z-index: 1;
+    margin-top: 120px;
+    will-change: transform, opacity;
+    opacity: 1;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+  &__image__server1 {
+    z-index: 1;
+    width: 500px;
+    will-change: transform, opacity;
+    opacity: 1;
+    transform: translateX(-5%) perspective(1000px) rotateX(-10.8935deg)
+      rotateY(22.2296deg);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+  &__image__server2 {
+    width: 520px;
+    position: absolute;
+    left: 65%;
+    transform: translateX(-40%) translateY(-80px) perspective(1200px)
+      rotateX(-9.44675deg) rotateY(180deg) scaleX(-1);
+    will-change: transform, opacity;
+    margin-top: 100px;
+    opacity: 1;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+  &__description h2 {
+    margin-bottom: 10px;
+  }
+
+  &__description &__description__p {
+    color: #4b4aac;
+  }
+
+  &__description p {
+    margin-bottom: 25px;
     color: #aaa7aa;
-    margin-left: 5px;
-    text-decoration: none;
-    padding: 10px 30px;
-    background-color: #2a2a2a;
-    border-radius: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  
-  .hero__description__button a:hover,
-  .hero__description a:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+  &__description__button {
+    width: 100%;
+    margin-top: 15px;
   }
-  
-  .hero__description__button--modifier:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .hero__description__button a,
-  .hero__description a {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
+}
+
+.hero__description__button .hero__description__button--modifier {
+  background-color: variables.$blue_hard;
+  color: white;
+}
+
+.hero__description__button .hero__description__button--modifier:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero__description__button a,
+.hero__description a {
+  color: #aaa7aa;
+  margin-left: 5px;
+  text-decoration: none;
+  padding: 10px 30px;
+  background-color: #2a2a2a;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero__description__button a:hover,
+.hero__description a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero__description__button--modifier:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero__description__button a,
+.hero__description a {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}

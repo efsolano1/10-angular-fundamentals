@@ -1,38 +1,24 @@
 <nav aria-label="Main Navigation">
-    @if(isVisible){
-        <menu class="menu" role="menubar">
-            <!--<li class="menu__item">
-              <a href="#" role="menuitem" tabindex="0">{{itemsMenu[0]}}</a>
-            </li>
-            <li class="menu__item" >
-              <a href="#" role="menuitem" tabindex="1">{{itemsMenu[1]}}</a>
-            </li>
-            <li class="menu__item">
-              <a href="#" role="menuitem" tabindex="2">{{itemsMenu[2]}}</a>
-            </li>
-            <li class="menu__item">
-              <a href="#" role="menuitem" tabindex="3">{{itemsMenu[3]}}</a>
-            </li>
-            <li class="menu__item">
-              <a href="#" role="menuitem" tabindex="4">{{itemsMenu[4]}}</a>
-            </li>-->
-            @for (item of itemsMenu; track $index) {
-                <li class="menu__item">
-                  <a  [tabindex]="$index" href="#">{{ item }}</a>
-                </li>
-              }
+  @if(isVisible){
+  <menu class="menu" role="menubar">
 
-            <li class="menu__item menu__item--modifier" aria-hidden="true">
-               <a href="#" role="menuitem">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" id="flag-icons-co" viewBox="0 0 640 480">
-                  <g fill-rule="evenodd" stroke-width="1pt">
-                    <path fill="#ffe800" d="M0 0h640v480H0z" />
-                    <path fill="#00148e" d="M0 240h640v240H0z" />
-                    <path fill="#da0010" d="M0 360h640v120H0z" />
-                  </g>
-                 </svg>
-                </a>
-            </li>
-          </menu>
-    } 
-  </nav>
+    @for (item of itemsMenu; track $index) {
+    <li class="menu__item">
+      <a [tabindex]="$index" href="#">{{ item }}</a>
+    </li>
+    }
+
+    <li class="menu__item menu__item--modifier" aria-hidden="true">
+      <a href="#" role="menuitem">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" id="flag-icons-co" viewBox="0 0 640 480">
+          <g fill-rule="evenodd" stroke-width="1pt">
+            <path fill="#ffe800" d="M0 0h640v480H0z" />
+            <path fill="#00148e" d="M0 240h640v240H0z" />
+            <path fill="#da0010" d="M0 360h640v120H0z" />
+          </g>
+        </svg>
+      </a>
+    </li>
+  </menu>
+  }
+</nav>

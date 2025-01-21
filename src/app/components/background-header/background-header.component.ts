@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-background-header',
   imports: [],
   templateUrl: './background-header.component.html',
-  styleUrl: './background-header.component.scss'
+  styleUrl: './background-header.component.scss',
 })
-export class BackgroundHeaderComponent {
-
-}
+export class BackgroundHeaderComponent {}

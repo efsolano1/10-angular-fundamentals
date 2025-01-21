@@ -5,10 +5,15 @@ import { Component } from '@angular/core';
   imports: [],
   standalone: true,
   templateUrl: './menu.component.html',
-  styleUrl: './menu.component.scss'
+  styleUrl: './menu.component.scss',
 })
 export class MenuComponent {
-  public itemsMenu=['umbrelOS', 'Umbrel Home', 'App Store', 'Community','Careers'];
+  public itemsMenu = [
+    'umbrelOS',
+    'Umbrel Home',
+    'App Store',
+    'Community',
+    'Careers',
+  ];
   public isVisible = true;
-
 }

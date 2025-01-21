@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-background-content',
   imports: [],
   templateUrl: './background-content.component.html',
-  styleUrl: './background-content.component.scss'
+  styleUrl: './background-content.component.scss',
 })
-export class BackgroundContentComponent {
-
-}
+export class BackgroundContentComponent {}
